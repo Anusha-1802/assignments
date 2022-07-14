@@ -1,0 +1,215 @@
+Assignment 2-
+
+1. Write a program to print unit digit of a given number.
+sol-
+#include<stdio.h>
+int main()
+{
+    int a;
+    printf("enter a number");
+    scanf("%d",&a);
+    printf("unit digit of %d is %d",a,a%10);
+    return 0;
+}
+
+2. Write a program to print a given number without its last digit.
+sol-
+#include<stdio.h>
+int main()
+{
+    int a;
+    printf("enter a number");
+    scanf("%d",&a);
+    printf("number without last digit of %d is %d",a,a/10);
+    return 0;
+}
+
+3. Write a program to swap values of two int variables
+sol-
+#include<stdio.h>
+int main()
+{
+    int a,b,c;
+    printf("enter any two numbers");
+    scanf("%d%d",&a,&b);
+    c=a;
+    a=b;
+    b=c;
+    printf("\n after swapping\n a=%d,\n b=%d",a,b);
+    return0;
+}
+
+4. Write a program to swap values of two int variables without using a third variable.
+sol-
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    printf("enter any two numbers");
+    scanf("%d%d",&a,&b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("\n after swapping\n a=%d,\n b=%d",a,b);
+    return 0;
+}
+
+5. Write a program to input a three-digit number and display the sum of the digits.
+sol-
+#include<stdio.h>
+int main()
+{
+    int a,r=0,s=0;
+    printf("enter a three digit number\n");
+    scanf("%d",&a);
+    r=a%10;
+    a=a/10;
+    s=s+r;
+
+     r=a%10;
+    a=a/10;
+    s=s+r;
+    
+     r=a%10;
+    a=a/10;
+    s=s+r;
+    
+    printf("sum of digit is=%d",s);
+    return 0;
+}
+
+6. Write a program which takes a character as an input and displays its ASCII code.
+sol-
+#include<stdio.h>
+int main()
+{
+    char a;
+    printf("enter any character\n");
+    scanf("%c",&a);
+    printf("%d",a);
+    return 0;
+}
+
+7. Write a program to find the position of first 1 in LSB.
+sol-
+#include<stdio.h>
+int main()
+{
+    int a,count=0, r=0;
+    printf("enter any number");
+    scanf("%d",&a);
+    r=a&1;
+    count++;
+    if(r==1)
+    {
+        printf("\n%d",count);
+    }
+    a=a>>1;
+
+    r=a&1;
+    count++;
+    if(r==1)
+    {
+        printf("\n%d",count);
+    }
+    a=a>>1;
+
+        printf("\nposition of 1 in LSB is on %d",a);
+    return 0;
+}
+
+8. Write a program to check whether the given number is even or odd using a bitwise 
+operator.
+sol-
+#include<stdio.h>
+int main()
+{
+    int a,r;
+    printf("enter any number");
+    scanf("%d",&a);
+    r= a&1;
+    if(r==1)
+    {
+        printf("\n%d is odd",a);
+    }
+    else
+    {
+        printf("\n%d is even",a);
+    }
+    return 0;
+
+}
+
+9. Write a program to print size of an int, a float, a char and a double type variable
+sol-
+#include<stdio.h>
+int main()
+{
+    int a;
+    printf("enter any number");
+    scanf("%d",&a);
+    printf("\n%d int",sizeof(int));
+    printf("\n%d float",sizeof(float));
+    printf("\n%d char",sizeof(char));
+    printf("\n%d double",sizeof(double));
+    return 0;
+}
+
+10. Write a program to make the last digit of a number stored in a variable as zero. 
+(Example - if x=2345 then make it x=2340)
+sol-
+#include<stdio.h>
+int main()
+{
+    int a,n;
+    printf("enter any number");
+    scanf("%d",&a);
+    a=a/10;
+    n=a*10;
+    printf("number is=%d",n);
+    return 0;
+
+}
+
+11. Write a program to input a number from the user and also input a digit. Append a 
+digit in the number and print the resulting number. (Example - number=234 and 
+digit=9 then the resulting number is 2349)
+sol-
+#include<stdio.h>
+int main()
+{
+    int n,d,num;
+    printf("enter a number and a digit");
+    scanf("%d%d",&n,&d);
+    num=n*10+d;
+    printf("\nafter number is %d",num);
+    return 0;
+}
+
+12. Assume price of 1 USD is INR 76.23. Write a program to take the amount in INR and 
+convert it into USD.
+sol-
+#include<stdio.h>
+int main()
+{
+    float a,n;
+    printf("enter any number of amount INR");
+    scanf("%f",&a);
+    n=a/76.23;
+    printf("\nconverted in USD is %f",n);
+    return 0;
+}
+
+13. Write a program to take a three-digit number from the user and rotate its digits by 
+one position towards the right
+sol-
+#include<stdio.h>
+int main()
+{
+    int x,n;
+    printf("enter any three digit number");
+    scanf("%d",&n);
+    x=n>>1;
+    printf("\ndigit after one right shift=%d",x);
+    return 0;
+}
