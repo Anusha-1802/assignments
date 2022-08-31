@@ -1,0 +1,193 @@
+Assignment 12-
+1. Write a recursive function to print first N natural numbers
+sol-
+#include<stdio.h>
+void natn(int n)
+{
+   if(n>0)
+   {
+    natn(n-1);
+    printf("%d ",n);
+   }
+}
+int main()
+{
+    int a;
+    printf("enter any number:\n");
+    scanf("%d",&a);
+    natn(a);
+    return 0;
+}
+
+2. Write a recursive function to print first N natural numbers in reverse order
+sol-
+#include<stdio.h>
+void natn(int n)
+{
+   if(n>0)
+   {
+    printf("%d ",n);
+    natn(n-1);
+   }
+}
+int main()
+{
+    int a;
+    printf("enter any number:\n");
+    scanf("%d",&a);
+    natn(a);
+    return 0;
+}
+
+3. Write a recursive function to print first N odd natural numbers
+sol-
+#include<stdio.h>
+void odd(int n)
+{
+    if(n==0)
+    return ;
+
+    odd(n-1);
+    printf("%d ",2*n-1);
+}
+int main()
+{
+    int a;
+    printf("enter any number:\n");
+    scanf("%d",&a);
+    odd(a);
+    return 0;
+}
+
+4. Write a recursive function to print first N odd natural numbers in reverse order
+sol-
+#include<stdio.h>
+void odd(int n)
+{
+    if(n==0)
+    return ;
+     printf("%d ",2*n-1);
+    odd(n-1);
+}
+int main()
+{
+    int a;
+    printf("enter any number:\n");
+    scanf("%d",&a);
+    odd(a);
+    return 0;
+}
+5. Write a recursive function to print first N even natural numbers
+sol-
+#include<stdio.h>
+void even(int n)
+{
+    if(n==0)
+    return ;
+    even(n-1);
+     printf("%d ",2*n);
+}
+int main()
+{
+    int a;
+    printf("enter any number:\n");
+    scanf("%d",&a);
+    even(a);
+    return 0;
+}
+
+6. Write a recursive function to print first N even natural numbers in reverse order
+sol-
+#include<stdio.h>
+void even(int n)
+{
+    if(n==0)
+    return ;
+    printf("%d ",2*n);
+    even(n-1);
+}
+int main()
+{
+    int a;
+    printf("enter any number:\n");
+    scanf("%d",&a);
+    even(a);
+    return 0;
+}
+
+7. Write a recursive function to print squares of first N natural numbers
+sol-
+#include<stdio.h>
+void sq(int n)
+{
+    if(n==0)
+    return;
+    sq(n-1);
+    printf("%d square is %d\n",n,n*n);
+}
+int main()
+{
+    int a;
+    printf("enter any number:\n");
+    scanf("%d",&a);
+    sq(a);
+    return 0;
+}
+
+8. Write a recursive function to print binary of a given decimal number
+sol-
+#include<stdio.h>
+void dtob(int x)
+{
+    if(x>0)
+    {
+        dtob(x/2);
+        printf("%d",x%2);
+    }
+}
+int main()
+{
+    int n;
+    printf("Enter any number :\n");
+    scanf("%d",&n);
+    dtob(n);
+    return 0;
+}
+9. Write a recursive function to print octal of a given decimal number
+sol-
+#include<stdio.h>
+void dtooct(int x)
+{
+    if(x>0)
+    {
+        dtooct(x/8);
+        printf("%d",x%8);
+    }
+}
+int main()
+{
+    int n;
+    printf("Enter any number :\n");
+    scanf("%d",&n);
+    dtooct(n);
+    return 0;
+}
+
+10. Write a recursive function to print reverse of a given number
+sol-
+#include<stdio.h>
+void reve(int );
+int main()
+{
+    int x;
+    printf("enter any number:\n");
+    scanf("%d",&x);
+    reve(x);
+    return 0;
+}
+void reve(int n)
+{
+   if(n!=0)
+   printf("%d",n%10);      
+   reve(n/10);
+}
